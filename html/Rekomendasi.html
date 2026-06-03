@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameMatch – Rekomendasi</title>
+  <link rel="stylesheet" href="/CSS/style.css" />
+</head>
+<body data-page="result">
+
+  <nav class="navbar">
+    <a href="Home.html" class="navbar-brand">Game<span>Match</span></a>
+    <ul class="navbar-nav">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Rekomendasi.html" class="active">Matchmaker</a></li>
+      <li><a href="Collection.html">Favorite</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <div class="result-header anim-up">
+      <h1>Rekomendasi <span class="text-blue">Game Untukmu</span></h1>
+      <p>
+        Kami telah menganalisis preferensi bermainmu. Berikut adalah daftar game
+        pilihan yang dikurasi khusus berdasarkan kuesioner terbaikmu.
+      </p>
+    </div>
+
+    <h3 class="result-section-title">Rekomendasi Bagi Kamu</h3>
+    <div class="games-grid" id="grid-recommended">
+    </div>
+
+    <h3 class="result-section-title">Rekomendasi Lainnya</h3>
+    <div class="games-grid" id="grid-others">
+    </div>
+
+    <div class="result-empty">
+      <h3>Belum menemukan Game Yang Cocok?</h3>
+      <p>
+        Mungkin preferensimu sedikit berubah. Kamu bisa memperbarui kuesioner
+        minat game kamu kapan saja untuk mendapatkan hasil yang lebih akurat.
+      </p>
+      <button class="btn btn-primary" id="btn-retry">
+        ↻ Ulangi Kuesioner
+      </button>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-brand">GameMatch</span>
+    <span class="footer-copy">2026 GameMatch. All rights reserved</span>
+    <button class="btn-logout">LOG OUT</button>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

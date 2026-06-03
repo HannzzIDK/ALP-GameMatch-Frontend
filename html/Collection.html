@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameMatch – Favorit Saya</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body data-page="favorite">
+
+  <nav class="navbar">
+    <a href="Home.html" class="navbar-brand">Game<span>Match</span></a>
+    <ul class="navbar-nav">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Rekomendasi.html">Matchmaker</a></li>
+      <li><a href="Collection.html" class="active">Favorite</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <div class="fav-header anim-up">
+      <h1>DAFTAR <span class="text-yellow">FAVORIT SAYA</span></h1>
+      <p>Kelola daftar game yang telah Anda simpan berdasarkan rekomendasi sistem.</p>
+    </div>
+
+    <div class="fav-stat-bar">
+      <p class="fav-stat-label" class="fav-stat-title">
+        STATISTIK FAVORIT
+      </p>
+      <p class="fav-stat-label">
+        Total <span class="text-yellow">Game tersimpan:</span> <span id="fav-count">0</span>
+      </p>
+      <button class="btn btn-primary btn-sm" id="btn-update">
+        ↻ Update <span class="text-yellow">Rekomendasi</span>
+      </button>
+    </div>
+
+    <div class="fav-grid" id="fav-grid">
+    </div>
+
+    <div class="fav-load-more">
+      <button class="btn btn-primary btn-sm" id="btn-load-more">
+        Show More Games ∨
+      </button>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer-brand">GameMatch</span>
+    <span class="footer-copy">2026 GameMatch. All rights reserved</span>
+    <button class="btn-logout">LOG OUT</button>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

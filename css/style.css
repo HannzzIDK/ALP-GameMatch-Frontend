@@ -1,18 +1,18 @@
-/* style.css - Custom styles for GameMatch (Bootstrap 5 compatible) */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap');
 
 :root {
   --bg-primary:      #121214;
-  --bg-secondary:     #1e2026;   /* ditambahkan untuk konsistensi */
+  --bg-secondary:     #1e2026; 
   --bg-card:         #1e2026;
   --accent-blue:     #0074e4;
-  --accent-blue-lt:  #3b9eff;    /* ditambahkan */
+  --accent-blue-lt:  #3b9eff;   
   --accent-gold:     #ffd200;
-  --accent-gold-lt:  #ffe066;    /* ditambahkan */
+  --accent-gold-lt:  #ffe066;   
   --text-primary:    #ffffff;
   --text-secondary:  #9698a0;
   --text-muted:      #64748b;
-  --border:          #2a2d3a;
+  --border:          #ffffff;
+  --border-secondary:  #000000;
   --font-head:       'Rajdhani', sans-serif;
   --font-body:       'Rajdhani', sans-serif;
   --radius-sm:       6px;
@@ -32,18 +32,16 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 2.4;
   font-size: 15px;
 }
 
-/* ========== TYPOGRAPHY & UTILITIES ========== */
 .text-blue  { color: var(--accent-blue); }
 .text-gold  { color: var(--accent-gold); }
 .text-muted { color: var(--text-muted); }
 .bg-card   { background-color: var(--bg-card); }
 .border-custom { border-color: var(--border); }
 
-/* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -59,8 +57,7 @@ body {
 .navbar {
   background: var(--bg-card) !important;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border) !important;
-  padding: 0.75rem 1.5rem;
+  padding: 0.10rem 1.5rem;
 }
 .navbar-brand {
   font-family: var(--font-head);
@@ -100,7 +97,7 @@ body {
   background-color: #2563eb !important;
   border-color: #2563eb !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0,116,228,0.4);
+  box-shadow: 0 4px 16px var(--border-secondary);
 }
 .btn-outline {
   background: transparent;
@@ -121,46 +118,28 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(255,210,0,0.4);
 }
-.btn-lg  { padding: 0.75rem 2rem; font-size: 1rem; }
+.btn-lg  { font-weight: 1000; padding: 0.75rem 2rem; font-size: 1rem; }
 .btn-sm  { padding: 0.35rem 1rem; font-size: 0.82rem; }
 .btn-full { width: 100%; }
 
-/* ========== HERO SECTION (kustom) ========== */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 50px;
-  max-width: 1200px;
-  margin: 0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:40px; padding:60px 50px 50px; max-width:1100px; margin:0 auto;
 }
-.hero-content { flex: 1; max-width: 480px; }
-.hero-title {
-  font-family: var(--font-head);
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-.hero-desc {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.75rem;
-  max-width: 380px;
-}
+.hero-content { flex:1; max-width:480px; }
+.hero-title { font-family:var(--font-head); font-size:2.4rem; font-weight:700; line-height:1.2; margin-bottom:18px; letter-spacing:.5px; }
+.hero-desc  { font-size:.88rem; color:var(--text-secondary); line-height:1.65; margin-bottom:28px; max-width:380px; }
+
 .hero-img-box {
-  width: 100%;
-  max-width: 500px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+  flex-shrink:0; position:relative; width:500px;
+  border-radius:var(--radius-md); overflow:hidden;
+  box-shadow:0 8px 40px var(--accent-blue);
 }
-.hero-img-box img {
-  width: 100%;
-  height: auto;
-  display: block;
+.hero-img-box img { width:100%; height:100%; object-fit:cover; background:var(--bg-card); }
+.hero-img-label {
+  position:absolute; top:14px; left:0; right:0; text-align:center;
+  font-family:var(--font-head); font-size:1.3rem; font-weight:700;
+  letter-spacing:4px; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.7); pointer-events:none;
 }
 
 .mm-options {
@@ -171,7 +150,7 @@ body {
 }
 .mm-option {
   background: var(--bg-primary);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-secondary);
   border-radius: var(--radius-sm);
   padding: 14px 20px;
   font-size: 1rem;
@@ -192,7 +171,7 @@ body {
 /* ========== MOOD SECTION (kustom dengan card) ========== */
 .mood-section {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-secondary);
   border-radius: 12px;
   padding: 2rem;
   margin: 70px auto ;
@@ -206,22 +185,21 @@ body {
 }
 .mood-desc {
   font-size: 0.86rem;
-  color: var(--text-secondary);
-  max-width: 560px;
+  color: var(--text-primary);
+  max-width: 800px;
   margin-bottom: 1rem;
 }
 .mood-tag {
   padding: 0.5rem 1.2rem;
   border-radius: 40px;
   border: 1px solid var(--border);
-  background: transparent;
+  background: var(--bg-primary);
   color: var(--text-secondary);
   font-size: 0.85rem;
   font-weight: 500;
   transition: all 0.2s;
 }
-.mood-tag:hover,
-.mood-tag.active {
+.mood-tag:hover {
   border-color: var(--accent-blue);
   color: var(--accent-blue);
   background: rgba(0,116,228,0.08);
@@ -230,14 +208,13 @@ body {
 /* ========== FOOTER (kustom) ========== */
 .footer {
   background: var(--bg-card);
-  border-top: 1px solid var(--border);
-  padding: 1rem 2rem;          /* padding vertikal lebih kecil */
+  padding: 1.8rem 2rem;          /* padding vertikal lebih kecil */
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: auto;            /* menempel ke bawah jika konten pendek */
+  margin-top: auto        /* menempel ke bawah jika konten pendek */
 }
 .footer-brand {
   font-family: var(--font-head);
@@ -249,56 +226,40 @@ body {
   color: var(--text-primary);
 }
 
+.progress-wrap { margin-bottom:28px; }
+.progress-meta { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.progress-label { font-size:.78rem; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; }
+.progress-pct { font-family:var(--font-head); font-size:2rem; font-weight:700; }
+.progress-track { height:5px; background:var(--border); border-radius:99px; overflow:hidden; }
+.progress-fill  { height:100%; background:var(--accent-blue); border-radius:99px; transition:width .5s; }
+
 /* ========== MATCHMAKER STEPS (mm-* komponen) ========== */
-.mm-page { min-height: 100vh; display: flex; flex-direction: column; }
-.mm-body { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+.mm-page { min-height:100vh; display:flex; flex-direction:column; }
+
+.mm-body { flex:1; display:flex; align-items:center; justify-content:center; padding:40px 20px; }
+
 .mm-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  width: 100%;
-  max-width: 580px;
-  box-shadow: var(--shadow);
+  padding : 90px 10px 100px;
+ 
 }
-.mm-step-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.mm-step-tag { font-size:.7rem; font-weight:600; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+.mm-card-title { font-family:var(--font-head); font-size:2rem; font-weight:700; letter-spacing:.5px; margin-bottom:10px; }
+.mm-card-desc  { font-size:.86rem; color:var(--text-secondary); line-height:1.6; margin-bottom:28px; }
+
+.mm-option01 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:24px;}
+.mm-option02 {
+  background:var(--bg-secondary); 
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  padding:20px 100px 30px;
+  text-align:left; cursor:pointer; transition:all .2s; position:relative;
 }
-.mm-card-title {
-  font-family: var(--font-head);
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-}
-.mm-card-desc {
-  font-size: 0.86rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-}
-.mm-option, .mm-chip, .mm-genre, .mm-spec-item {
-  transition: all 0.2s;
-  cursor: pointer;
-}
-.mm-option.active, .mm-chip.active, .mm-genre.active, .mm-spec-item.active {
-  border-color: var(--accent-gold) !important;
-  background: var(--bg-primary) !important;
-  color: var(--accent-gold) !important;
-}
-.mm-genre-icon { width: 44px; height: 44px; background: var(--bg-card); border-radius: var(--radius-sm); }
-.mm-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-  margin-top: 1rem;
-}
-.mm-hint { font-size: 0.8rem; color: var(--text-muted); }
-.mm-hint-icon { color: var(--accent-gold); }
+.mm-option:hover  { border-color:var(--accent-blue); }
+.mm-option.active { border-color:var(--accent-gold); background:rgba(245,158,11,.06); }
+.mm-option-icon   { font-size:1.5rem; margin-bottom:10px; }
+.mm-option-label  { font-family:var(--font-head); font-size:1.1rem; font-weight:1000; letter-spacing:.5px; color: var(--text-primary);}
+.mm-option-check  { position:absolute; bottom:10px; right:10px; font-size:.9rem; color:var(--text-muted); transition:color .2s; }
+.mm-option.active .mm-option-check { color:var(--accent-gold); }
 
 /* ========== GAME CARDS (untuk rekomendasi & favorit) ========== */
 .games-grid {
@@ -352,6 +313,13 @@ body {
   font-weight: 600;
 }
 .game-card-price { font-size: 0.8rem; color: var(--text-muted); }
+
+.mm-bottom {
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:24px; border-top:1px solid var(--border); margin-top:8px;
+}
+.mm-hint { display:flex; align-items:center; gap:8px; font-size:.8rem; color:var(--text-muted); }
+.mm-hint-icon { color:var(--accent-gold); font-size:.9rem; }
 
 /* ========== FAVORITE PAGE ========== */
 .fav-grid {

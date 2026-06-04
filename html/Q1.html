@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body data-page="home">
+<body data-page="mm-step1">
 
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container-fluid px-3">
@@ -26,15 +26,12 @@
     </div>
   </nav>
 
-
-
   <div class="mm-body">
     <div class="mm-card anim-up">
 
-      <!-- Progress bar seperti contoh -->
       <div class="progress-wrap">
         <div class="progress-meta">
-          <span class="progress-label">LANGKAH 1 DARI 4</span>
+          <span class="progress-label">Langkah 1 dari 4</span>
           <span class="progress-pct">25%</span>
         </div>
         <div class="progress-track">
@@ -42,23 +39,40 @@
         </div>
       </div>
 
-      <p class="mm-step-tag">MATCHMAKER STEP 1</p>
+      <p class="mm-step-tag">Matchmaker Step 1</p>
       <h2 class="mm-card-title">Kondisi <span class="text-blue">Psikologis</span></h2>
       <p class="mm-card-desc">Bagaimana perasaanmu hari ini?</p>
 
-      <!-- Daftar opsi – menggunakan class mm-option agar sesuai CSS -->
-      <div class="mm-options">
-        <button class="mm-option" data-value="happy">😊 Happy</button>
-        <button class="mm-option" data-value="sad">😢 Sad</button>
-        <button class="mm-option" data-value="angry">😠 Angry</button>
+      <div class="row g-3 mb-4">
+        <div class="col-12 col-md-4">
+         <button class="mm-option w-100" data-value="happy">
+           <div class="mm-option-icon">😊</div>
+           <div class="mm-option-label">Happy</div>
+            <div class="mm-option-check"></div>
+         </button>
       </div>
-
+       <div class="col-12 col-md-4">
+         <button class="mm-option w-100" data-value="sad">
+            <div class="mm-option-icon">😢</div>
+            <div class="mm-option-label">Sad</div>
+            <div class="mm-option-check"></div>
+          </button>
+        </div>
+          <div class="col-12 col-md-4">
+           <button class="mm-option w-100" data-value="angry">
+            <div class="mm-option-icon">😠</div>
+             <div class="mm-option-label">Angry</div>
+             <div class="mm-option-check"></div>
+           </button>
+         </div>
+      </div>
+        
       <div class="mm-bottom">
         <p class="mm-hint">
           <span class="mm-hint-icon">ℹ</span>
           Your choice helps us find the perfect squad for your mood
         </p>
-        <button type="button" class="btn btn-primary" id="btn-next">Next Step</button>
+        <button class="btn btn-primary" id="btn-next">Next Step</button>
       </div>
 
     </div>
@@ -70,6 +84,6 @@
     <button class="btn-logout">LOG OUT</button>
   </footer>
 
-  <script src="/js/scrit.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>

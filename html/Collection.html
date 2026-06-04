@@ -4,43 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GameMatch – Favorit Saya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/CSS/style.css">
 </head>
-<body data-page="favorite">
-
-  <nav class="navbar">
-    <a href="Home.html" class="navbar-brand">Game<span>Match</span></a>
-    <ul class="navbar-nav">
-      <li><a href="Home.html">Home</a></li>
-      <li><a href="Rekomendasi.html">Matchmaker</a></li>
-      <li><a href="Collection.html" class="active">Favorite</a></li>
-    </ul>
+<body class="text-white" data-page="favorite">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand" href="Home.html">Game<span class="text-blue">Match</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Rekomendasi.html">Matchmaker</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Collection.html">Favorite</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main class="container">
+  <main class="container my-5 px-4">
 
-    <div class="fav-header anim-up">
-      <h1>DAFTAR <span class="text-yellow">FAVORIT SAYA</span></h1>
-      <p>Kelola daftar game yang telah Anda simpan berdasarkan rekomendasi sistem.</p>
+    <div class="fav-header anim-up text-start mb-5">
+      <h1 class="fw-bold display-5 text-white">DAFTAR <span class="text-warning">FAVORIT SAYA</span></h1>
+      <p class="text-secondary small opacity-75">Kelola daftar game yang telah Anda simpan berdasarkan rekomendasi sistem.</p>
     </div>
 
-    <div class="fav-stat-bar">
-      <p class="fav-stat-label" class="fav-stat-title">
-        STATISTIK FAVORIT
-      </p>
-      <p class="fav-stat-label">
-        Total <span class="text-yellow">Game tersimpan:</span> <span id="fav-count">0</span>
-      </p>
-      <button class="btn btn-primary btn-sm" id="btn-update">
-        ↻ Update <span class="text-yellow">Rekomendasi</span>
-      </button>
+    <div class="fav-stat-bar d-flex flex-row justify-content-between align-items-center bg-secondary bg-opacity-10 border border-secondary border-opacity-25 p-4 rounded-3 mb-4">
+      <div>
+        <small class="text-secondary d-block fw-bold text-uppercase mb-1" style="font-size: 0.75rem;">Statistik Koleksi</small>
+        <p class="fs-4 m-0 fw-bold text-white">
+          Total <span class="text-warning">Game tersimpan: <span id="fav-count">2</span></span>
+        </p>
+      </div>
+      <div>
+        <button class="btn btn-dark btn-sm fw-bold px-3 py-2 border border-secondary border-opacity-50" id="btn-update">
+          ↻ Update <span class="text-warning">Rekomendasi</span>
+        </button>
+      </div>
     </div>
 
     <div class="fav-grid" id="fav-grid">
-    </div>
+      
+      <div class="fav-slot filled">
+        <a href="detail.html" class="fav-link">
+          <img src="images/gow.jpg" alt="God of War Ragnarok">
+        </a>
+        <button class="fav-slot-del">✕</button>
+      </div>
 
-    <div class="fav-load-more">
-      <button class="btn btn-primary btn-sm" id="btn-load-more">
+      <div class="fav-slot filled">
+        <a href="detail-pragmata.html" class="fav-link">
+          <img src="images/Prag.jpg" alt="Pragmata">
+        </a>
+        <button class="fav-slot-del">✕</button>
+      </div>
+
+      <div class="fav-slot"></div>
+      <div class="fav-slot"></div>
+      <div class="fav-slot"></div>
+      <div class="fav-slot"></div>
+      <div class="fav-slot"></div>
+      <div class="fav-slot"></div>
+
+    </div>
+    <div class="fav-load-more text-center mt-5">
+      <button class="btn btn-primary btn-sm fw-bold px-4 py-2 shadow-sm" id="btn-load-more">
         Show More Games ∨
       </button>
     </div>
@@ -49,10 +79,11 @@
 
   <footer class="footer">
     <span class="footer-brand">GameMatch</span>
-    <span class="footer-copy">2026 GameMatch. All rights reserved</span>
+    <span class="footer-copy text-white fw-bold">2026 GameMatch. All rights reserved</span>
     <button class="btn-logout">LOG OUT</button>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/script.js"></script>
 </body>
 </html>

@@ -99,7 +99,7 @@ if (page === 'home') {
 
 // ==================== STEP 1 (Q1.html) ====================
 if (page === 'mm-step1') {
-  // Jika quiz sudah lengkap, langsung ke rekomendasi
+
   if (isQuizComplete()) {
     window.location.href = 'Rekomendasi.html';
   } else {
@@ -364,7 +364,6 @@ if (page === 'detail') {
   }
 }
 
-// ==================== HALAMAN FAVORITE ====================
 if (page === 'favorite') {
   const quizData = getQuizData();
   if (!quizData.mood) {

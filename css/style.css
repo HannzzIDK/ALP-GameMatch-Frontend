@@ -248,6 +248,13 @@ body {
 .mm-card-title { font-family:var(--font-head); font-size:2rem; font-weight:700; text-align: center; letter-spacing:.5px; margin-bottom:10px; }
 .mm-card-desc  { font-size:.86rem; color:var(--text-secondary); line-height:1.6; text-align: center; margin-bottom:28px; }
 
+.mm-bottom {
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:24px; border-top:1px solid var(--border); margin-top:40px;
+}
+.mm-hint { display:flex; align-items:center; gap:8px; font-size:.8rem; color:var(--text-muted); }
+.mm-hint-icon { color:var(--accent-gold); font-size:.9rem; }
+
 /* ========== QUESTION1 ========== */
 .mm-options { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:24px;}
 .mm-option {
